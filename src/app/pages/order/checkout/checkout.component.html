@@ -1,0 +1,26 @@
+<div class="checkout-container">
+    <h1>Checkout</h1>
+  
+    <div class="user-details">
+      <label>Name: <input [(ngModel)]="userDetails.name" /></label>
+      <label>Address: <input [(ngModel)]="userDetails.shippingAddress" /></label>
+  
+      <label>Payment Method:
+        <select [(ngModel)]="userDetails.paymentMethod">
+          <option value="Card">Credit/Debit Card</option>
+          <option value="Cash">Cash on Delivery</option>
+        </select>
+      </label>
+    </div>
+  
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div *ngFor="let item of cartItems" class="order-item">
+        <p>{{ item.product.name }} (x{{ item.quantity }}) - ${{ item.product.price * item.quantity }}</p>
+      </div>
+      <h3>Total: ${{ totalPrice }}</h3>
+    </div>
+  
+    <button (click)="placeOrder()">Place Order</button>
+  </div>
+  

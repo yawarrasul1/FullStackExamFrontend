@@ -1,0 +1,31 @@
+<div *ngIf="loading" class="loading-spinner">Loading cart...</div>
+
+<div class="cart-container" *ngIf="cartItems.length > 0; else emptyCart">
+  <h2>Your Cart</h2>
+
+  <div class="cart-items">
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <img
+        [src]="item.product.image || noImg"
+        alt="{{ item.product.name }}"
+      />
+      <div class="item-info">
+        <h4>{{ item.product.name }}</h4>
+        <p>Price: ${{ item.product.price }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+        <button (click)="removeItem(item.product._id)">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-summary">
+    <h3>Total: ${{ getTotalPrice() | number: '1.2-2' }}</h3>
+    <button (click)="clearCart()">Clear Cart</button>
+    <button class="checkout-btn" (click)="goToCheckout()">Proceed to Checkout</button>
+
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <h2>Your cart is empty 😔</h2>
+</ng-template>

@@ -1,0 +1,75 @@
+.report-dashboard {
+    padding: 20px;
+    text-align: center;
+  
+    h1 {
+      color: #333;
+    }
+  
+    .loading,
+    .error {
+      color: red;
+    }
+  
+    .report-summary {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+  
+      .summary-card {
+        padding: 15px;
+        border-radius: 8px;
+        width: 40%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+        &.sales {
+          background: #4caf50;
+          color: #fff;
+        }
+  
+        &.users {
+          background: #3f51b5;
+          color: #fff;
+        }
+      }
+    }
+  
+    .recent-reports {
+      h2 {
+        color: #444;
+        margin-top: 10px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          background: #f9f9f9;
+          margin: 5px 0;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  
+    .report-actions {
+      margin-top: 20px;
+  
+      button {
+        padding: 10px 20px;
+        background: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease;
+  
+        &:hover {
+          background: #388e3c;
+        }
+      }
+    }
+  }
+  

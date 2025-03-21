@@ -1,0 +1,21 @@
+<div class="auth-container">
+    <h1>Register</h1>
+  
+    <form (submit)="register()">
+      <label>Username:</label>
+      <input type="text" [(ngModel)]="username" required [ngModelOptions]="{standalone: true}" />
+  
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="email" required [ngModelOptions]="{standalone: true}" />
+  
+      <label>Password:</label>
+      <input type="password" [(ngModel)]="password" required [ngModelOptions]="{standalone: true}" />
+  
+      <p *ngIf="error" class="error">{{ error }}</p>
+  
+      <button type="submit">Register</button>
+    </form>
+  
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+  </div>
+  

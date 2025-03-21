@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    cursor: pointer;
+  
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  }
