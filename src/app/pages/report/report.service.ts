@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
   providedIn: "root",
 })
 export class ReportService {
-  private apiUrl = 'http://localhost:5000/api/report'; 
+  private apiUrl = 'https://fullstackexambackend.onrender.com/api/report'; 
   
 
     private getAuthHeaders() {
